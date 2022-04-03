@@ -1,0 +1,11 @@
+
+{{#each this}}
+    <img class="country-info__img" src="{{flags.png}}" alt="flag of country" width="250" height="150">
+    
+    <h1 class="country-info__title">{{name.official}}</h1>
+
+    <p class="country-info__text">Capital:<span class="country-info__text--color">{{capital}}</span></p>
+    <p class="country-info__text">Population:<span class="country-info__text--color">{{population}}</span></p>
+    <p class="country-info__text">Language:<span class="country-info__text--color">{{#each languages}}
+        {{#if @index}},{{/if}} {{this}}{{/each}}</span></p>
+{{/each}}
